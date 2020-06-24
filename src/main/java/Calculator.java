@@ -1,47 +1,23 @@
-import javax.swing.*;
-import java.util.ArrayList;
-import java.util.Scanner;
-
 public class Calculator {
-    public static void main(String arg[]) {
-        System.out.println("Sum = " +sumofnum(20,40));
-        System.out.println("Sum = " + sumofnum1(2,3,4));
-        System.out.println("product = " + ProductOfNumbers(2,5));
-        System.out.println("Product = " + ProductOfNumbers1(5,2,4));
-
-
-    }
-
-   public static int sumofnum(int a, int n) {
+    public static int Add(int ...a){
         int sum = 0;
+        for(int i : a)
 
-       sum = a+n;
-
+            sum += i ;
 
         return sum;
     }
-    public static int sumofnum1(int a, int b, int c)
-    {
-        int sum1;
-        sum1 = a+b+c;
+    public static int Multiply(int ...j){
+        int product = 1;
 
-        return sum1;
+        for (int i : j)
+
+            product = product * i;
+        return product;
     }
-public static int ProductOfNumbers(int a,int b)
-{
-    int product = 0;
+    public static void main(String[] args){
+        System.out.println(Add(-1,-5));
+        System.out.println(Multiply(2,4,2));
+    }
 
-    product = a * b;
-
-    return  product;
 }
-public static int ProductOfNumbers1(int a,int b,int c)
-{
-    int product = 0;
-    product = a*b*c;
-
-    return  product;
-}
-}
-
-
